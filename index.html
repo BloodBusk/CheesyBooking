@@ -1,27 +1,33 @@
-<!Doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="">
 <head>
-    <title>Restaurant Booking System</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar 2</title>
+    <link rel="stylesheet" href="style.css">
     <script src="javascript.js"></script>
 </head>
 
 <body>
     <main>
-        <div>
-            <button id="dropDownBtn">Pick a Date<i class="fas fa-arrow-down"></i></button>
+        <div id="CalendarContainer">
+            <label>Name:</label>
+            <input type="text" id="nameText">
+            <label>Amount:</label>
+            <select name="select" id="amountText">
+                <option value="1">1 Person</option>
+                <option value="2">2 Person</option>
+                <option value="3">3 Person</option>
+                <option value="4">4 Person</option>
+                <option value="5">5 Person</option>
+            </select>
+            <input type="date" id="date">
+            <input type="time" id="time">
         </div>
-        <div>
-        <ul id="dropDown" class="toggleOff">
-            
-        </ul>
-        </div>
-        <div>
-            <button id="confirm">Confirm</button>
-        </div>
-        <div>
-            <p id="bookingConfirmation"></p>
-        </div>
+        <button id="confirmBtn">Confirm Booking</button>
+        <div id="confirmationText"></div>
     </main>
+
+
+
 </body></html>
