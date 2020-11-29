@@ -10,22 +10,38 @@
 
 <body>
     <main>
+        <h1>Restaurant <span class="orangeText">Cheesy</span></h1>
+        <hr class="line">
         <div id="CalendarContainer">
-            <label>Name:</label>
-            <input type="text" id="nameText">
-            <label>Amount:</label>
-            <select name="select" id="amountText">
-                <option value="1">1 Person</option>
-                <option value="2">2 Person</option>
-                <option value="3">3 Person</option>
-                <option value="4">4 Person</option>
-                <option value="5">5 Person</option>
-            </select>
-            <input type="date" id="date">
-            <input type="time" id="time">
+            <div class="optionBox">
+                <label>Your Name:</label>
+                <input type="text" id="nameText">
+            </div>
+            <div class="optionBox">
+                <label>Amount:</label>
+                <select name="select" id="amountText">
+                    <option value="1">1 Person</option>
+                    <option value="2">2 Person</option>
+                    <option value="3">3 Person</option>
+                    <option value="4">4 Person</option>
+                    <option value="5">5 Person</option>
+                </select>
+            </div>
+            <div class="optionBox">
+                <label>Date</label>
+                <input type="date" id="date">
+            </div>
+            <div class="optionBox">
+                <label>Time</label>
+                <input type="time" id="time">
+            </div>
         </div>
-        <button id="confirmBtn">Confirm Booking</button>
-        <div id="confirmationText"></div>
+        <div id="confirmBox">
+            <button id="confirmBtn">Confirm Booking</button>
+        </div>
+        <div>
+            <p id="confirmationText"></p>
+        </div>
     </main>
 
 

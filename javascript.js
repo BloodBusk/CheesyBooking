@@ -15,13 +15,14 @@ let bookingInfo = {
 }
 let bookingDate = [];
 
+//shows booking information
 let showDate = () => {
     for (let b of bookingDate) {
         $("confirmationText").innerHTML = `Congratulations! you have booking a table on ${b.date} at ${b.time}, booked by ${b.name} with a party of ${b.amount} people.`;
     }
 }
 
-//boolean local storage
+//boolean local storage enabled and catches exceptions
 const isLocalStorageEnabled = () => {
     let foo = "bar";
     try {
@@ -33,6 +34,7 @@ const isLocalStorageEnabled = () => {
     }
 }
 
+//sets values to correct object, pushes into array when isLocalStorageEnabled = true, and sets items in localStorage
 let writeDate = () => {
     if (isLocalStorageEnabled) {
         $("confirmBtn").addEventListener("click", () => {
@@ -53,8 +55,10 @@ let writeDate = () => {
 
 }
 
+//runs on load
 let main = () => {
     writeDate();
+    showDate();
 }
 
 window.addEventListener("load", main);
